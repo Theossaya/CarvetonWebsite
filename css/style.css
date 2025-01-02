@@ -1,0 +1,563 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    max-width: 1400px; /* Increase the max width for spacious layout */
+    margin: 0 auto;
+    padding: 0 20px; /* Fair space on either side */
+}
+
+
+/* Header Styling */
+header {
+    background-color: #ffffff; /* White background */
+    padding: 40px 0; /* No extra padding on the header */
+}
+
+header .container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between the logo, separator, and navigation */
+    padding: 0 40px; /* Reduced spacing on edges */
+}
+
+/* Logo Styling */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000; /* Black color for the logo */
+}
+
+/* Separator Styling */
+header .separator {
+    width: 1px;
+    height: 24px; /* Same height as the logo text */
+    background-color: #eaeaea; /* Light gray color for the separator */
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Adjust spacing between navigation items */
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333; /* Dark text for navigation links */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF3B33; /* Highlight color on hover */
+}
+
+/* Intro Section */
+.intro {
+    text-align: center; /* Center-align content */
+    padding: 60px 20px; /* Add spacing around the intro */
+}
+
+.intro h1 {
+    font-size: 44px; /* Uniform font size for all <h1> elements */
+    font-weight: bold; /* Bold font weight */
+    color: #000; /* Black color */
+    line-height: 1.4; /* Add line height for readability */
+}
+
+
+
+/* Features List */
+.intro .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px 40px; /* Space between rows and columns */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px; /* Center and limit the overall width */
+    justify-items: center;/* Restrict the overall width */
+}
+
+.intro .features li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center; /* Align the icon and text */
+    gap: 10px; /* Space between the icon and the text */
+}
+
+.intro .features li::before {
+    content: "✔"; /* Checkmark symbol */
+    font-size: 14px;
+    color: #ffffff; /* White checkmark */
+    background-color: #FF3B33; /* Red circle background */
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make it a circle */
+    font-weight: bold;
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 60px 20px; /* Add spacing around the section */
+    background-color: #ffffff; /* White background */
+}
+
+.projects .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 40px; /* Space between the project cards */
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+}
+
+.project {
+    text-align: left; /* Align text to the left */
+}
+
+.project img {
+    width: 100%;
+    max-width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the image */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.project h3 {
+    font-size: 18px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.project p {
+    font-size: 14px; /* Text font size */
+    color: #555; /* Dark gray for the description */
+    line-height: 1.6; /* Better readability */
+    margin: 5px 0; /* Consistent spacing between text lines */
+}
+
+.project p strong {
+    font-weight: bold;
+    color: #333; /* Slightly darker text for emphasis */
+}
+
+
+/* Branding Section */
+.branding {
+    text-align: center; /* Center-align the title and description */
+    padding: 60px 20px; /* Add spacing around the section */
+    background-color: #ffffff; /* White background */
+}
+
+.branding h1 {
+    font-size: 28px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.branding p {
+    font-size: 16px; /* Description font size */
+    color: #555; /* Gray color for text */
+    margin-bottom: 40px; /* Space below description */
+}
+
+/* Grid Layout for Branding Items */
+.branding-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 40px; /* Space between items */
+    max-width: 1200px; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.branding-item {
+    text-align: left; /* Align content to the left */
+    position: relative; /* For positioning the line and circular numbers */
+    padding-top: 20px; /* Add space above for the line */
+}
+
+/* Horizontal Line Above Each Item */
+.branding-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea; /* Light gray color for the line */
+}
+
+/* Circular Number (h2) */
+.branding-item h2 {
+    font-size: 14px; /* Font size for the number */
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    background-color: #FF3B33; /* Red circular background */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make it a circle */
+    margin-bottom: 10px; /* Space below the circle */
+}
+
+/* Item Title */
+.branding-item h3 {
+    font-size: 16px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for titles */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Item Description */
+.branding-item p {
+    font-size: 14px; /* Description font size */
+    color: #555; /* Gray color for descriptions */
+    line-height: 1.6; /* Better readability */
+}
+/* Reusable Button Style */
+.btn {
+    display: inline-block;
+    margin: 40px auto 0;
+    padding: 10px 30px;
+    background-color: #FF3B33; /* Bright red background */
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 30px; /* Rounded corners for button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.btn:hover {
+    background-color: #e05b52; /* Slightly darker red on hover */
+    transform: translateY(-2px); /* Slight hover lift */
+}
+
+
+
+/* Process Section */
+.process {
+    text-align: center; /* Center-align the title and description */
+    padding: 60px 20px; /* Add spacing around the section */
+    background-color: #ffffff; /* White background */
+}
+
+.process h1 {
+    font-size: 28px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.process p {
+    font-size: 16px; /* Description font size */
+    color: #555; /* Gray color for text */
+    margin-bottom: 40px; /* Space below description */
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns for the steps */
+    position: relative; /* For the connecting line */
+    gap: 20px; /* Vertical spacing between rows if needed */
+    max-width: 1200px; /* Center the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Connecting Line Between Steps */
+.process-steps::before {
+    content: "";
+    position: absolute;
+    top: 16px; /* Aligns with the center of the circular numbers */
+    left: 0;
+    right: 0;
+    height: 1px; /* Thickness of the line */
+    background-color: #FF3B33; /* Red color for the line */
+    z-index: 0; /* Behind the circles */
+}
+
+/* Process Step Styling */
+.process-step {
+    text-align: left; /* Align all content to the left */
+    position: relative; /* For circular numbers */
+    z-index: 1; /* Above the connecting line */
+}
+
+/* Circular Numbers */
+.process-step h2 {
+    font-size: 14px; /* Font size for the number */
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    background-color: #FF3B33; /* Red circular background */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make it a circle */
+    margin-bottom: 10px; /* Space below the circle */
+    z-index: 1; /* Above the connecting line */
+}
+
+/* Step Titles */
+.process-step h3 {
+    font-size: 16px; /* Step title font size */
+    font-weight: bold;
+    color: #000; /* Black color for titles */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Step Descriptions */
+.process-step p {
+    font-size: 14px; /* Description font size */
+    color: #555; /* Gray color for descriptions */
+    line-height: 1.6; /* Better readability */
+}
+
+
+/* FAQ Section */
+.faq {
+    background-color: #ffffff; /* White background */
+    padding: 60px 20px; /* Add spacing around the section */
+}
+
+.faq h2 {
+    text-align: center; /* Center-align the FAQ title */
+    font-size: 28px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.faq .container {
+    max-width: 800px; /* Limit the width of the FAQ container */
+    margin: 0 auto; /* Center the container */
+}
+
+.faq-item {
+    border-bottom: 1px solid #eaeaea; /* Light gray border between items */
+    padding: 15px 20px; /* Add spacing around each FAQ item */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and focus effects */
+}
+
+.faq-item:hover {
+    background-color: #f9f9f9; /* Subtle background change on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq-item h3 {
+    font-size: 16px; /* Font size for question titles */
+    font-weight: bold;
+    color: #000; /* Black color for titles */
+    display: flex;
+    justify-content: space-between; /* Align title and toggle icon */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default margin */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.faq-item h3:hover {
+    color: #FF3B33; /* Change title color on hover */
+}
+
+.faq-item h3::after {
+    content: "▼"; /* Downward arrow for closed state */
+    font-size: 14px;
+    color: #555; /* Gray color for icon */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for icon rotation and color */
+}
+
+.faq-item.active h3::after {
+    transform: rotate(180deg); /* Rotate the arrow for open state */
+    color: #FF3B33; /* Change arrow color when active */
+}
+
+.faq-item p {
+    font-size: 14px; /* Font size for answers */
+    color: #555; /* Gray color for text */
+    line-height: 1.6; /* Improve readability */
+    margin: 10px 0 0; /* Space above the answer */
+    max-height: 0; /* Collapse answers by default */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth expand/collapse */
+}
+
+.faq-item.active p {
+    max-height: 200px; /* Expand answer when active */
+    padding-top: 10px; /* Add space above the answer when expanded */
+}
+
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #ffffff; /* White background */
+    padding: 60px 20px; /* Spacing around the section */
+    text-align: center; /* Center-align content */
+}
+
+.newsletter h2 {
+    font-size: 28px; /* Title font size */
+    font-weight: bold;
+    color: #000; /* Black color for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.newsletter p {
+    font-size: 16px; /* Description font size */
+    color: #555; /* Gray color for the text */
+    margin-bottom: 30px; /* Space below the description */
+}
+
+/* Form Styling */
+.newsletter form {
+    display: flex; /* Align input and button horizontally */
+    flex-direction: column; /* Stack them on smaller screens */
+    align-items: center; /* Center-align the form elements */
+    gap: 15px; /* Space between input and button */
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.newsletter form input {
+    width: 100%; /* Full width */
+    padding: 15px; /* Add padding inside the input */
+    font-size: 16px; /* Font size for the input text */
+    border: 1px solid #eaeaea; /* Light gray border */
+    border-radius: 5px; /* Slight rounding of corners */
+    background-color: #f9f9f9; /* Light gray background */
+    color: #555; /* Text color */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+.newsletter form input:focus {
+    border-color: #FF3B33; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5); /* Add a soft shadow */
+}
+
+.newsletter form button {
+    width: 100%; /* Make button full width to match the input */
+    max-width: 200px; /* Limit button width */
+    padding: 15px; /* Add padding to the button */
+    background-color: #FF3B33; /* Bright red background */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    text-align: center; /* Center the button text */
+    border: none; /* Remove button border */
+    border-radius: 30px; /* Fully rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.newsletter form button:hover {
+    background-color: #e05b52; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 20px 40px; /* Space around the footer */
+    display: flex; /* Flex layout for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space between "CARVETON" and base content */
+    height: 250px; /* Fixed height for the footer */
+    position: relative; /* For the bold "CARVETON" text */
+}
+
+/* Bold "CARVETON" Text */
+footer .title {
+    font-size: 200px; /* Large font size */
+    font-weight: bold;
+    color: #FF3B33; /* Bright red color */
+    text-align: center; /* Center-align the text */
+    margin: auto; /* Push it to the center vertically */
+}
+
+/* Footer Content at the Bottom */
+footer .container {
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Align left and right sections */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Full width */
+    position: absolute;
+    bottom: 0; /* Align content to the bottom of the footer */
+    left: 0; /* Stretch to the left edge */
+    right: 0; /* Stretch to the right edge */
+    padding: 0 40px; /* Padding for left and right spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Left Section (Copyright and Navigation) */
+footer .left {
+    display: flex; /* Flex layout for copyright and links */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Space between copyright and links */
+}
+
+footer .left p {
+    font-size: 14px; /* Small font size */
+    color: #ffffff; /* White text */
+    margin: 0; /* Remove default margin */
+}
+
+footer .left ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout for links */
+    gap: 15px; /* Space between links */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+footer .left ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 14px; /* Small font size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer .left ul li a:hover {
+    color: #FF3B33; /* Red color on hover */
+}
+
+/* Right Section (Social Media Links) */
+footer .social-media {
+    display: flex; /* Horizontal layout */
+    gap: 15px; /* Space between social media links */
+}
+
+footer .social-media a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 14px; /* Small font size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer .social-media a:hover {
+    color: #ff6f61; /* Red color on hover */
+}
