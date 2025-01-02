@@ -3,6 +3,7 @@ body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter" ;
 }
 
 /* Container */
@@ -68,7 +69,7 @@ nav ul li a:hover {
 
 .intro h1 {
     font-size: 44px; /* Uniform font size for all <h1> elements */
-    font-weight: bold; /* Bold font weight */
+    font-weight: normal; /* Bold font weight */
     color: #000; /* Black color */
     line-height: 1.4; /* Add line height for readability */
 }
