@@ -496,13 +496,10 @@ footer .title {
     font-size: 100px; /* Large font size */
     font-weight: bold;
     color: #FF3B33; /* Bright red color */
-    width: 100%; /* Span the full width */
     text-align: center; /* Center-align the text */
-    margin: 0; /* Remove vertical margin */
-    position: absolute; /* Position it relative to the footer */
-    top: 50%; /* Center vertically */
-    left: 0; /* Align with the left edge */
-    transform: translateY(-50%); /* Center properly */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Span the full width */
+    position: static; /* Normal positioning for desktop */
 }
 
 
@@ -627,23 +624,27 @@ footer .social-media a:hover {
     }
 }
 
-/* Footer: Mobile View */
-@media (max-width: 768px) {
-    footer .container {
-        flex-direction: column; /* Stack the left and right sections */
-        align-items: center; /* Center-align all items */
-        gap: 20px; /* Add spacing between sections */
-    }
 
-    footer .left, footer .social-media {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items */
-        gap: 10px; /* Reduce spacing */
-    }
-}
 
+/* Footer Title: Mobile View (Overlay Style) */
 @media (max-width: 768px) {
     footer .title {
         font-size: 60px; /* Smaller font size for mobile */
+        color: rgba(255, 59, 51, 0.1); /* Semi-transparent red */
+        position: absolute; /* Overlay positioning */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust positioning to center */
+        z-index: 0; /* Place it behind footer content */
+        text-align: center;
+    }
+
+    footer .container {
+        position: relative; /* Ensure content is above the overlay */
+        z-index: 1; /* Layer above the title */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Center-align text */
+        gap: 20px; /* Add spacing between sections */
     }
 }
