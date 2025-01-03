@@ -29,8 +29,8 @@ header .container {
 
 /* Logo Styling */
 header .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 600;
     color: #000000; /* Black color for the logo */
 }
 
@@ -38,22 +38,22 @@ header .logo {
 header .separator {
     width: 1px;
     height: 24px; /* Same height as the logo text */
-    background-color: #eaeaea; /* Light gray color for the separator */
+    background-color: #D9D9D9 /* Light gray color for the separator */
 }
 
 /* Navigation Menu */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px; /* Adjust spacing between navigation items */
+    gap: 28.73px; /* Adjust spacing between navigation items */
     margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    color: #333333; /* Dark text for navigation links */
+    color: #000000; /* Dark text for navigation links */
     transition: color 0.3s ease;
 }
 
@@ -65,13 +65,14 @@ nav ul li a:hover {
 .intro {
     text-align: center; /* Center-align content */
     padding: 60px 20px; /* Add spacing around the intro */
+    margin-bottom: 58.5px;
 }
 
 .intro h1 {
-    font-size: 44px; /* Uniform font size for all <h1> elements */
-    font-weight: normal; /* Bold font weight */
+    font-size: 40px; /* Uniform font size for all <h1> elements */
+    font-weight: 400; /* Bold font weight */
     color: #000; /* Black color */
-    line-height: 1.4; /* Add line height for readability */
+    line-height: 48.41px; /* Add line height for readability */
 }
 
 
@@ -80,18 +81,18 @@ nav ul li a:hover {
 .intro .features {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px 40px; /* Space between rows and columns */
+    gap: 16px; /* Space between rows and columns */
     list-style: none; /* Remove default list styling */
     padding: 0;
-    margin: 20px auto;
+    margin: 31px auto;
     max-width: 600px; /* Center and limit the overall width */
     justify-items: center;/* Restrict the overall width */
 }
 
 .intro .features li {
     font-size: 16px;
-    font-weight: 500;
-    color: #333; /* Dark text color */
+    font-weight: 400;
+    color: #000000; /* Dark text color */
     display: flex;
     align-items: center; /* Align the icon and text */
     gap: 10px; /* Space between the icon and the text */
@@ -108,20 +109,20 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%; /* Make it a circle */
-    font-weight: bold;
+    font-weight: 400;
 }
 
 
 /* Projects Section */
 .projects {
-    padding: 60px 20px; /* Add spacing around the section */
+    padding: 58.5px 20px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
 .projects .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 40px; /* Space between the project cards */
+    gap: 22px; /* Space between the project cards */
     max-width: 1200px; /* Limit the width */
     margin: 0 auto; /* Center the container */
 }
@@ -139,43 +140,46 @@ nav ul li a:hover {
 }
 
 .project h3 {
-    font-size: 18px; /* Title font size */
-    font-weight: bold;
-    color: #000; /* Black color for the title */
+    font-size: 16px; /* Title font size */
+    font-weight: 600;
+    color: #000000; /* Black color for the title */
     margin-bottom: 10px; /* Space below the title */
+    line-height: 19.36px;
 }
 
 .project p {
-    font-size: 14px; /* Text font size */
-    color: #555; /* Dark gray for the description */
-    line-height: 1.6; /* Better readability */
+    font-size: 16px; /* Text font size */
+    font-weight: 400;
+    color: #646464; /* Dark gray for the description */
+    line-height: 19.36px; /* Better readability */
     margin: 5px 0; /* Consistent spacing between text lines */
 }
 
 .project p strong {
-    font-weight: bold;
-    color: #333; /* Slightly darker text for emphasis */
+    font-weight: 400;
+    color: #000000; /* Slightly darker text for emphasis */
 }
 
 
 /* Branding Section */
 .branding {
     text-align: center; /* Center-align the title and description */
-    padding: 60px 20px; /* Add spacing around the section */
+    padding: 58.5px 20px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
 .branding h1 {
     font-size: 28px; /* Title font size */
-    font-weight: bold;
+    font-weight: 400;
     color: #000; /* Black color for title */
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 22px; /* Space below title */
 }
 
 .branding p {
     font-size: 16px; /* Description font size */
-    color: #555; /* Gray color for text */
-    margin-bottom: 40px; /* Space below description */
+    color: #000000; /* Gray color for text */
+    margin-bottom: 78px; /* Space below description */
+    font-weight: 400;
 }
 
 /* Grid Layout for Branding Items */
@@ -190,7 +194,7 @@ nav ul li a:hover {
 .branding-item {
     text-align: left; /* Align content to the left */
     position: relative; /* For positioning the line and circular numbers */
-    padding-top: 20px; /* Add space above for the line */
+    padding-top: 40px; /* Add space above for the line */
 }
 
 /* Horizontal Line Above Each Item */
@@ -216,32 +220,36 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%; /* Make it a circle */
-    margin-bottom: 10px; /* Space below the circle */
+    margin-bottom: 36px; /* Space below the circle */
 }
 
 /* Item Title */
 .branding-item h3 {
     font-size: 16px; /* Title font size */
-    font-weight: bold;
+    font-weight: 600;
     color: #000; /* Black color for titles */
-    margin-bottom: 10px; /* Space below the title */
+    margin-bottom: 5px; /* Space below the title */
 }
 
 /* Item Description */
 .branding-item p {
-    font-size: 14px; /* Description font size */
-    color: #555; /* Gray color for descriptions */
-    line-height: 1.6; /* Better readability */
+    font-size: 16px; /* Description font size */
+    color: #000000; /* Gray color for descriptions */
+    line-height: 24px; /* Better readability */
+    font-weight: 400;
+}
+
+.branding .btn {
+    margin-top: 11px;
 }
 /* Reusable Button Style */
 .btn {
     display: inline-block;
     margin: 40px auto 0;
-    padding: 10px 30px;
+    padding: 12px 31px;
     background-color: #FF3B33; /* Bright red background */
     color: #ffffff; /* White text */
     font-size: 16px;
-    font-weight: bold;
     text-align: center;
     text-decoration: none; /* Remove underline */
     border-radius: 30px; /* Rounded corners for button */
@@ -259,21 +267,22 @@ nav ul li a:hover {
 /* Process Section */
 .process {
     text-align: center; /* Center-align the title and description */
-    padding: 60px 20px; /* Add spacing around the section */
+    padding: 58.5px 20px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
 .process h1 {
     font-size: 28px; /* Title font size */
-    font-weight: bold;
+    font-weight: 400;
     color: #000; /* Black color for title */
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 22px; /* Space below title */
 }
 
 .process p {
     font-size: 16px; /* Description font size */
     color: #555; /* Gray color for text */
-    margin-bottom: 40px; /* Space below description */
+    margin-bottom: 78px; /* Space below description */
+    font-weight: 400;
 }
 
 /* Process Steps */
@@ -308,7 +317,7 @@ nav ul li a:hover {
 /* Circular Numbers */
 .process-step h2 {
     font-size: 14px; /* Font size for the number */
-    font-weight: bold;
+    font-weight: 400;
     color: #ffffff; /* White text */
     background-color: #FF3B33; /* Red circular background */
     width: 32px;
@@ -317,7 +326,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%; /* Make it a circle */
-    margin-bottom: 10px; /* Space below the circle */
+    margin-bottom: 32px; /* Space below the circle */
     z-index: 1; /* Above the connecting line */
 }
 
@@ -346,9 +355,14 @@ nav ul li a:hover {
 .faq h2 {
     text-align: center; /* Center-align the FAQ title */
     font-size: 28px; /* Title font size */
-    font-weight: bold;
-    color: #000; /* Black color for title */
-    margin-bottom: 20px; /* Space below the title */
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+.faq h3 {
+    text-align: center; /* Center-align the FAQ title */
+    font-size: 16px; /* Title font size */
+    margin-bottom: 78px; /* Space below the title */
+    font-weight: 400;
 }
 
 .faq .container {
@@ -505,7 +519,7 @@ footer .title {
 
 /* Footer Content at the Bottom */
 footer .container {
-    display: flex; /* Flex layout */
+    display: flex; /* Flex layout */ 
     justify-content: space-between; /* Align left and right sections */
     align-items: center; /* Vertically align items */
     width: 100%; /* Full width */
