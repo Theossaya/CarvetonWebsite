@@ -3,28 +3,28 @@ body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter" ;
+    font-family: "Inter", sans-serif;
 }
 
 /* Container */
 .container {
-    max-width: 1400px; /* Increase the max width for spacious layout */
+    /* Increase the max width for spacious layout */
     margin: 0 auto;
-    padding: 0 20px; /* Fair space on either side */
+    padding: 0 60px; /* Fair space on either side */
 }
 
 
 /* Header Styling */
 header {
     background-color: #ffffff; /* White background */
-    padding: 40px 0; /* No extra padding on the header */
+    padding-top: 58px; /* No extra padding on the header */
 }
 
 header .container {
     display: flex;
     align-items: center; /* Align items vertically */
-    gap: 20px; /* Space between the logo, separator, and navigation */
-    padding: 0 40px; /* Reduced spacing on edges */
+    gap: 24px; /* Space between the logo, separator, and navigation */
+    height: 33px;
 }
 
 /* Logo Styling */
@@ -37,7 +37,7 @@ header .logo {
 /* Separator Styling */
 header .separator {
     width: 1px;
-    height: 24px; /* Same height as the logo text */
+    height: 33px; /* Same height as the logo text */
     background-color: #D9D9D9 /* Light gray color for the separator */
 }
 
@@ -55,6 +55,7 @@ nav ul li a {
     font-weight: 500;
     color: #000000; /* Dark text for navigation links */
     transition: color 0.3s ease;
+    line-height: 16.94px;
 }
 
 nav ul li a:hover {
@@ -64,16 +65,18 @@ nav ul li a:hover {
 /* Intro Section */
 .intro {
     text-align: center; /* Center-align content */
-    padding: 60px 20px; /* Add spacing around the intro */
-    margin-bottom: 58.5px;
+    margin-top: 144px; /* Add spacing around the intro */
+    margin-bottom: 96px;
 }
+
+
 
 .intro h1 {
     font-size: 40px; /* Uniform font size for all <h1> elements */
     font-weight: 400; /* Bold font weight */
     color: #000; /* Black color */
     line-height: 48.41px; /* Add line height for readability */
-}
+}   
 
 
 
@@ -81,16 +84,16 @@ nav ul li a:hover {
 .intro .features {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 16px; /* Space between rows and columns */
+    gap: 16px; 
     list-style: none; /* Remove default list styling */
     padding: 0;
-    margin: 31px auto;
-    max-width: 600px; /* Center and limit the overall width */
-    justify-items: center;/* Restrict the overall width */
+    margin: 31px auto 0;
+    max-width: 422px; /* Center and limit the overall width */
+    justify-items: center;
 }
 
 .intro .features li {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #000000; /* Dark text color */
     display: flex;
@@ -98,32 +101,35 @@ nav ul li a:hover {
     gap: 10px; /* Space between the icon and the text */
 }
 
-.intro .features li::before {
-    content: "✔"; /* Checkmark symbol */
-    font-size: 14px;
-    color: #ffffff; /* White checkmark */
-    background-color: #FF3B33; /* Red circle background */
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Make it a circle */
-    font-weight: 400;
+.intro .features li img {
+    width: 20px; /* Width of the SVG */
+    height: 20px; /* Height of the SVG */
+    display: inline-block; /* Inline to align with text */
+}
+
+
+.intro .btn {
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.intro .btn:hover {
+    background-color: #d12b26; /* Darker red on hover */
 }
 
 
 /* Projects Section */
 .projects {
-    padding: 58.5px 20px; /* Add spacing around the section */
+    padding: 78px 0px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
 .projects .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 22px; /* Space between the project cards */
-    max-width: 1200px; /* Limit the width */
+    gap: 28px; /* Space between the project cards */
+    max-width: 1319px; /* Limit the width */
     margin: 0 auto; /* Center the container */
 }
 
@@ -143,7 +149,7 @@ nav ul li a:hover {
     font-size: 16px; /* Title font size */
     font-weight: 600;
     color: #000000; /* Black color for the title */
-    margin-bottom: 10px; /* Space below the title */
+    margin: 5px 0; /* Space below the title */
     line-height: 19.36px;
 }
 
@@ -152,7 +158,7 @@ nav ul li a:hover {
     font-weight: 400;
     color: #646464; /* Dark gray for the description */
     line-height: 19.36px; /* Better readability */
-    margin: 5px 0; /* Consistent spacing between text lines */
+    margin-bottom: 5px; /* Consistent spacing between text lines */
 }
 
 .project p strong {
@@ -164,7 +170,7 @@ nav ul li a:hover {
 /* Branding Section */
 .branding {
     text-align: center; /* Center-align the title and description */
-    padding: 58.5px 20px; /* Add spacing around the section */
+    padding: 34px 0px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
@@ -187,8 +193,8 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four equal columns */
     gap: 40px; /* Space between items */
-    max-width: 1200px; /* Limit the width of the grid */
-    margin: 0 auto; /* Center the grid */
+    max-width: 1398px; /* Limit the width of the grid */
+    justify-content: start; /* Align grid items to the left */
 }
 
 .branding-item {
@@ -210,12 +216,12 @@ nav ul li a:hover {
 
 /* Circular Number (h2) */
 .branding-item h2 {
-    font-size: 14px; /* Font size for the number */
-    font-weight: bold;
+    font-size: 15px; /* Font size for the number */
+    font-weight: 400;
     color: #ffffff; /* White text */
     background-color: #FF3B33; /* Red circular background */
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,14 +251,14 @@ nav ul li a:hover {
 /* Reusable Button Style */
 .btn {
     display: inline-block;
-    margin: 40px auto 0;
+    margin: 42px auto 0;
     padding: 12px 31px;
     background-color: #FF3B33; /* Bright red background */
     color: #ffffff; /* White text */
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
     text-decoration: none; /* Remove underline */
-    border-radius: 30px; /* Rounded corners for button */
+    border-radius: 22px; /* Rounded corners for button */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
@@ -267,7 +273,7 @@ nav ul li a:hover {
 /* Process Section */
 .process {
     text-align: center; /* Center-align the title and description */
-    padding: 58.5px 20px; /* Add spacing around the section */
+    padding: 58.5px 0px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
 
@@ -280,9 +286,10 @@ nav ul li a:hover {
 
 .process p {
     font-size: 16px; /* Description font size */
-    color: #555; /* Gray color for text */
+    color: #000000; /* Gray color for text */
     margin-bottom: 78px; /* Space below description */
     font-weight: 400;
+    line-height: 24px;
 }
 
 /* Process Steps */
@@ -290,9 +297,10 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four equal columns for the steps */
     position: relative; /* For the connecting line */
-    gap: 20px; /* Vertical spacing between rows if needed */
     max-width: 1200px; /* Center the grid */
     margin: 0 auto; /* Center the grid */
+    max-height: 191px;
+
 }
 
 /* Connecting Line Between Steps */
@@ -316,12 +324,12 @@ nav ul li a:hover {
 
 /* Circular Numbers */
 .process-step h2 {
-    font-size: 14px; /* Font size for the number */
-    font-weight: 400;
+    font-size: 15px; /* Font size for the number */
+    font-weight: 300;
     color: #ffffff; /* White text */
     background-color: #FF3B33; /* Red circular background */
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,23 +341,25 @@ nav ul li a:hover {
 /* Step Titles */
 .process-step h3 {
     font-size: 16px; /* Step title font size */
-    font-weight: bold;
+    font-weight: 600;
     color: #000; /* Black color for titles */
     margin-bottom: 10px; /* Space below the title */
+    line-height: 19.36px;
 }
 
 /* Step Descriptions */
 .process-step p {
-    font-size: 14px; /* Description font size */
-    color: #555; /* Gray color for descriptions */
-    line-height: 1.6; /* Better readability */
+    font-size: 16px; /* Description font size */
+    font-weight: 400;
+    color: #000000; /* Black color for descriptions */
+    line-height: 24px; /* Better readability */
 }
 
 
 /* FAQ Section */
 .faq {
     background-color: #ffffff; /* White background */
-    padding: 60px 20px; /* Add spacing around the section */
+    padding: 58.5px 0px; /* Add spacing around the section */
 }
 
 .faq h2 {
@@ -358,6 +368,7 @@ nav ul li a:hover {
     margin-bottom: 22px;
     font-weight: 400;
 }
+
 .faq h3 {
     text-align: center; /* Center-align the FAQ title */
     font-size: 16px; /* Title font size */
@@ -366,13 +377,13 @@ nav ul li a:hover {
 }
 
 .faq .container {
-    max-width: 800px; /* Limit the width of the FAQ container */
+    max-width: 731.6px; /* Limit the width of the FAQ container */
     margin: 0 auto; /* Center the container */
 }
 
 .faq-item {
-    border-bottom: 1px solid #eaeaea; /* Light gray border between items */
-    padding: 15px 20px; /* Add spacing around each FAQ item */
+    border-bottom: 1px solid #e8e8e8; /* Light gray border between items */
+    padding: 30px 0px; /* Add spacing around each FAQ item */
     cursor: pointer; /* Pointer cursor for interactivity */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and focus effects */
 }
@@ -384,7 +395,7 @@ nav ul li a:hover {
 
 .faq-item h3 {
     font-size: 16px; /* Font size for question titles */
-    font-weight: bold;
+    font-weight: 400;
     color: #000; /* Black color for titles */
     display: flex;
     justify-content: space-between; /* Align title and toggle icon */
@@ -397,16 +408,16 @@ nav ul li a:hover {
     color: #FF3B33; /* Change title color on hover */
 }
 
-.faq-item h3::after {
-    content: "▼"; /* Downward arrow for closed state */
-    font-size: 14px;
-    color: #555; /* Gray color for icon */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for icon rotation and color */
+/* Replace the original `::after` pseudo-element styles with these */
+.faq-item h3 img {
+    width: 17.6px; /* Width of the SVG icon */
+    height: 9.6px; /* Height of the SVG icon */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for rotation and color */
 }
 
-.faq-item.active h3::after {
-    transform: rotate(180deg); /* Rotate the arrow for open state */
-    color: #FF3B33; /* Change arrow color when active */
+.faq-item.active h3 img {
+    transform: rotate(180deg); /* Rotate the image for the active state */
+    filter: hue-rotate(30deg); /* Optional: Change the color for active state */
 }
 
 .faq-item p {
@@ -425,24 +436,28 @@ nav ul li a:hover {
 }
 
 
+
 /* Newsletter Section */
 .newsletter {
     background-color: #ffffff; /* White background */
-    padding: 60px 20px; /* Spacing around the section */
+    padding: 58.5px 0px; /* Spacing around the section */
     text-align: center; /* Center-align content */
 }
 
 .newsletter h2 {
     font-size: 28px; /* Title font size */
-    font-weight: bold;
-    color: #000; /* Black color for the title */
-    margin-bottom: 10px; /* Space below the title */
+    font-weight: 400;
+    color: #000000; /* Black color for the title */
+    margin-bottom: 22px; /* Space below the title */
+    line-height: 33.89px;
 }
 
 .newsletter p {
     font-size: 16px; /* Description font size */
-    color: #555; /* Gray color for the text */
-    margin-bottom: 30px; /* Space below the description */
+    font-weight: 400;
+    line-height: 24px;
+    color: #000000; /* Gray color for the text */
+    margin-bottom: 39px; /* Space below the description */
 }
 
 /* Form Styling */
@@ -450,19 +465,21 @@ nav ul li a:hover {
     display: flex; /* Align input and button horizontally */
     flex-direction: column; /* Stack them on smaller screens */
     align-items: center; /* Center-align the form elements */
-    gap: 15px; /* Space between input and button */
-    max-width: 400px; /* Limit the width of the form */
+    gap: 39px; /* Space between input and button */
+    max-width: 420px; /* Limit the width of the form */
     margin: 0 auto; /* Center the form */
+    /* max-height: 130px; */
 }
 
 .newsletter form input {
-    width: 100%; /* Full width */
+    width: 420px; /* Full width */
     padding: 15px; /* Add padding inside the input */
-    font-size: 16px; /* Font size for the input text */
+    font-size: 14px; /* Font size for the input text */
+    line-height: 21px;
     border: 1px solid #eaeaea; /* Light gray border */
-    border-radius: 5px; /* Slight rounding of corners */
+    border-radius: 4px; /* Slight rounding of corners */
     background-color: #f9f9f9; /* Light gray background */
-    color: #555; /* Text color */
+    color: #f5f5f5; /* Text color */
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
 }
@@ -474,15 +491,16 @@ nav ul li a:hover {
 
 .newsletter form button {
     width: 100%; /* Make button full width to match the input */
-    max-width: 200px; /* Limit button width */
-    padding: 15px; /* Add padding to the button */
+    max-width: 186.2px; /* Limit button width */
+    padding: 12.6px 31.5px; /* Add padding to the button */
     background-color: #FF3B33; /* Bright red background */
     color: #ffffff; /* White text */
-    font-size: 16px; /* Font size */
-    font-weight: bold;
+    font-size: 14px; /* Font size */
+    font-weight: 600;
+    line-height: 16.94px;
     text-align: center; /* Center the button text */
     border: none; /* Remove button border */
-    border-radius: 30px; /* Fully rounded corners */
+    border-radius: 22px; /* Fully rounded corners */
     cursor: pointer; /* Change cursor to pointer */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
@@ -493,91 +511,92 @@ nav ul li a:hover {
 }
 
 
-/* Footer Section */
+/* Footer Base Styling */
 footer {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
-    padding: 20px 40px; /* Space around the footer */
-    display: flex; /* Flex layout for alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-between; /* Space between "CARVETON" and base content */
-    height: 250px; /* Fixed height for the footer */
-    position: relative; /* For the bold "CARVETON" text */
+    width: 100%;
+    height: 557px; /* Footer height */
+    background: #120808; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
 }
 
-/* Bold "CARVETON" Text */
+/* Carveton Title */
 footer .title {
-    font-size: 100px; /* Large font size */
-    font-weight: bold;
+    font-size: 255px; /* Large font size */
+    font-weight: 600;
     color: #FF3B33; /* Bright red color */
-    text-align: center; /* Center-align the text */
-    margin: 0; /* Remove default margin */
-    width: 100%; /* Span the full width */
-    position: static; /* Normal positioning for desktop */
+    line-height: 308.61px; /* Line height matches typography */
+    text-align: center; /* Center-align */
+    margin: auto; /* Position in vertical center */
 }
 
+/* Footer Bottom Content */
 
-/* Footer Content at the Bottom */
-footer .container {
-    display: flex; /* Flex layout */ 
-    justify-content: space-between; /* Align left and right sections */
-    align-items: center; /* Vertically align items */
-    width: 100%; /* Full width */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute left and right sections */
+    align-items: center; 
+    width: 1390px;
+    margin: 0 auto; /* Center align the container */
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Align vertically */
     position: absolute;
-    bottom: 0; /* Align content to the bottom of the footer */
-    left: 0; /* Stretch to the left edge */
-    right: 0; /* Stretch to the right edge */
-    padding: 0 40px; /* Padding for left and right spacing */
-    box-sizing: border-box; /* Include padding in width calculation */
+    bottom: 40px; /* Position at the bottom with some spacing */
+    z-index: 2; 
 }
 
-/* Left Section (Copyright and Navigation) */
-footer .left {
-    display: flex; /* Flex layout for copyright and links */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Space between copyright and links */
+/* Left Section */
+.footer-content .left {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* Space between text and links */
 }
 
-footer .left p {
-    font-size: 14px; /* Small font size */
-    color: #ffffff; /* White text */
-    margin: 0; /* Remove default margin */
+.footer-content .left p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
 }
 
-footer .left ul {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Horizontal layout for links */
-    gap: 15px; /* Space between links */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+.footer-content .left nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
 }
 
-footer .left ul li a {
-    text-decoration: none; /* Remove underline */
-    color: #ffffff; /* White text */
-    font-size: 14px; /* Small font size */
-    transition: color 0.3s ease; /* Smooth hover effect */
+.footer-content .left nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-footer .left ul li a:hover {
-    color: #FF3B33; /* Red color on hover */
+.footer-content .left nav ul li a:hover {
+    color: #FF3B33; /* Highlight on hover */
 }
 
-/* Right Section (Social Media Links) */
-footer .social-media {
-    display: flex; /* Horizontal layout */
-    gap: 15px; /* Space between social media links */
+/* Right Section */
+.footer-content .right {
+    display: flex;
+    gap: 32px; /* Space between social media links */
 }
 
-footer .social-media a {
-    text-decoration: none; /* Remove underline */
-    color: #ffffff; /* White text */
-    font-size: 14px; /* Small font size */
-    transition: color 0.3s ease; /* Smooth hover effect */
+.footer-content .right a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-footer .social-media a:hover {
-    color: #ff6f61; /* Red color on hover */
+.footer-content .right a:hover {
+    color: #FF3B33; /* Highlight on hover */
 }
 
 
