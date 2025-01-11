@@ -6,6 +6,7 @@ body, h1, h2, h3, p, ul, li, a {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 /* Container */
@@ -65,48 +66,94 @@ nav ul li a:hover {
 }
 
 /* Intro Section */
+/* Intro Section */
 .intro {
     text-align: center; /* Center-align content */
     margin-top: 144px; /* Add spacing around the intro */
     margin-bottom: 96px;
 }
 
+.intro .container {
+    max-width: 880px; /* Set the container width */
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* Remove extra padding */
+}
 
+/* Intro Header Container */
+.intro-header {
+    width: 880px; /* Define container width */
+    height: 144px; /* Define container height */
+    margin: 0 auto; /* Center the header container */
+    display: flex;
+    flex-direction: column; /* Stack the h1 elements vertically */
+    justify-content: center; /* Center h1 elements vertically */
+    align-items: center; /* Center h1 elements horizontally */
+}
 
-.intro h1 {
-    font-size: 40px; /* Uniform font size for all <h1> elements */
-    font-weight: 400; /* Bold font weight */
-    color: #000; /* Black color */
-    line-height: 48.41px; /* Add line height for readability */
-}   
+/* Styling for Each h1 */
+.intro-header h1 {
+    font-size: 40px; /* Font size for all <h1> elements */
+    font-weight: 400; /* Normal font weight */
+    color: #000000; /* Black color */
+    line-height: 1.2; /* Space between lines */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Ensure all headings are centered */
+    letter-spacing: -0.8px
+}
+ 
 
 
 
 /* Features List */
 .intro .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 16px; 
     list-style: none; /* Remove default list styling */
     padding: 0;
-    margin: 31px auto 0;
-    max-width: 422px; /* Center and limit the overall width */
-    justify-items: center;
+    margin: 31px auto 0; /* Center horizontally and add spacing above */
+    max-width: 422px; /* Set the container width */
+}
+
+.intro .features .row {
+    display: flex; /* Use flexbox for the rows */
+    justify-content: center; /* Center the items in the row */
+    gap: 32px; /* Space between items in the row */
+    margin-bottom: 16px; /* Add spacing between the top and bottom rows */
+}
+
+.intro .features .row:last-child {
+    margin-bottom: 0; /* Remove margin for the last row */
 }
 
 .intro .features li {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
     font-size: 14px;
     font-weight: 400;
     color: #000000; /* Dark text color */
-    display: flex;
-    align-items: center; /* Align the icon and text */
-    gap: 10px; /* Space between the icon and the text */
+    gap: 10px; /* Space between the icon and text */
+    text-align: center; /* Center-align the text */
 }
 
 .intro .features li img {
-    width: 20px; /* Width of the SVG */
-    height: 20px; /* Height of the SVG */
+    width: 22px; /* Width of the SVG icon */
+    height: 22px; /* Height of the SVG icon */
     display: inline-block; /* Inline to align with text */
+}
+
+
+.btn {
+    margin: 42px auto 0;
+    padding: 12px 45.1px;
+    gap: 10px;
+    background-color: #FF3B33; /* Bright red background */
+    color: #ffffff; /* White text */
+    font-size: 13px;
+    line-height: 16.52px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 22px; /* Rounded corners for button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
 
 
@@ -117,7 +164,10 @@ nav ul li a:hover {
 }
 
 .intro .btn:hover {
-    background-color: #d12b26; /* Darker red on hover */
+    background-color: transparent; 
+    transform: translateY(-2px); /* Slight hover lift */
+    border: 1px solid #FF3B33;;
+    color: #FF3B33;;
 }
 
 
@@ -196,8 +246,10 @@ nav ul li a:hover {
     grid-template-columns: repeat(4, 1fr); /* Four equal columns */
     gap: 40px; /* Space between items */
     max-width: 1398px; /* Limit the width of the grid */
-    justify-content: start; /* Align grid items to the left */
+    margin: 0 auto; /* Center the grid within the parent container */
+    justify-content: center; /* Center-align the grid items */
 }
+
 
 .branding-item {
     text-align: left; /* Align content to the left */
@@ -213,7 +265,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #eaeaea; /* Light gray color for the line */
+    background-color: #D9D9D9; /* Light gray color for the line */
 }
 
 /* Circular Number (h2) */
@@ -251,24 +303,6 @@ nav ul li a:hover {
     margin-top: 11px;
 }
 /* Reusable Button Style */
-.btn {
-    display: inline-block;
-    margin: 42px auto 0;
-    padding: 12px 31px;
-    background-color: #FF3B33; /* Bright red background */
-    color: #ffffff; /* White text */
-    font-size: 13px;
-    text-align: center;
-    text-decoration: none; /* Remove underline */
-    border-radius: 22px; /* Rounded corners for button */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
-}
-
-.btn:hover {
-    background-color: #e05b52; /* Slightly darker red on hover */
-    transform: translateY(-2px); /* Slight hover lift */
-}
 
 
 
@@ -385,7 +419,7 @@ nav ul li a:hover {
 
 .faq-item {
     border-bottom: 1px solid #e8e8e8; /* Light gray border between items */
-    padding: 30px 0px; /* Add spacing around each FAQ item */
+    padding: 24.5px 0px; /* Add spacing around each FAQ item */
     cursor: pointer; /* Pointer cursor for interactivity */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and focus effects */
 }
@@ -418,15 +452,15 @@ nav ul li a:hover {
 }
 
 .faq-item.active h3 img {
-    transform: rotate(180deg); /* Rotate the image for the active state */
     filter: hue-rotate(30deg); /* Optional: Change the color for active state */
 }
 
 .faq-item p {
-    font-size: 14px; /* Font size for answers */
-    color: #555; /* Gray color for text */
-    line-height: 1.6; /* Improve readability */
-    margin: 10px 0 0; /* Space above the answer */
+    font-size: 16px; /* Font size for answers */
+    color: #000000; /* Gray color for text */
+    font-weight: 400;
+    line-height: 24px; /* Improve readability */
+    margin: 8px 0 0; /* Space above the answer */
     max-height: 0; /* Collapse answers by default */
     overflow: hidden; /* Hide overflowing content */
     transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth expand/collapse */
@@ -470,21 +504,26 @@ nav ul li a:hover {
     gap: 39px; /* Space between input and button */
     max-width: 420px; /* Limit the width of the form */
     margin: 0 auto; /* Center the form */
-    /* max-height: 130px; */
 }
 
 .newsletter form input {
-    width: 420px; /* Full width */
-    padding: 15px; /* Add padding inside the input */
-    font-size: 14px; /* Font size for the input text */
-    line-height: 21px;
-    border: 1px solid #eaeaea; /* Light gray border */
-    border-radius: 4px; /* Slight rounding of corners */
+    width: 364px; /* Make input take full width of its container */
+    padding: 14px 28px; /* Apply padding for placeholder positioning */
+    border: none; /* Light gray border */
+    border-radius: 4px 0 0 0; /* Apply border-radius from Figma */
     background-color: #f9f9f9; /* Light gray background */
     color: #f5f5f5; /* Text color */
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+
+    /* Typography from Figma */
+    font-family: 'Inter', sans-serif; /* Assuming 'Inter' font is available */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
 }
+
+
 
 .newsletter form input:focus {
     border-color: #FF3B33; /* Change border color on focus */
@@ -515,6 +554,7 @@ nav ul li a:hover {
 
 /* Footer Base Styling */
 footer {
+    margin-top: 58.5px;
     width: 100%;
     height: 557px; /* Footer height */
     background: #120808; /* Dark background */
@@ -548,7 +588,7 @@ footer .title {
     justify-content: space-between; /* Space between left and right sections */
     align-items: center; /* Align vertically */
     position: absolute;
-    bottom: 40px; /* Position at the bottom with some spacing */
+    bottom: 28px; /* Position at the bottom with some spacing */
     z-index: 2; 
 }
 
