@@ -1,12 +1,15 @@
 /* General Reset */
-body, h1, h2, h3, p, ul, li, a {
+html, body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+    overflow-x: hidden; 
+}
+html {
+    width: 100%;
 }
 
 /* Container */
@@ -43,6 +46,8 @@ header .separator {
     height: 33px; /* Same height as the logo text */
     background-color: #D9D9D9 /* Light gray color for the separator */
 }
+
+
 
 /* Navigation Menu */
 nav ul {
@@ -301,6 +306,14 @@ nav ul li a:hover {
 
 .branding .btn {
     margin-top: 11px;
+    box-shadow: 0px 8px 18px 0px rgba(255, 59, 51, 0.3); /* Apply Figma box-shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+button:hover {
+    background-color: #e05b52; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0px 10px 20px 0px rgba(255, 59, 51, 0.4); /* Enhance shadow on hover */
 }
 /* Reusable Button Style */
 
@@ -312,6 +325,10 @@ nav ul li a:hover {
     padding: 58.5px 0px; /* Add spacing around the section */
     background-color: #ffffff; /* White background */
 }
+.process-header {
+    margin: 0 auto;
+    width: 517px; /* Set fixed width for natural line breaks */
+}
 
 .process h1 {
     font-size: 28px; /* Title font size */
@@ -320,7 +337,7 @@ nav ul li a:hover {
     margin-bottom: 22px; /* Space below title */
 }
 
-.process p {
+.process-header p {
     font-size: 16px; /* Description font size */
     color: #000000; /* Gray color for text */
     margin-bottom: 78px; /* Space below description */
@@ -335,19 +352,27 @@ nav ul li a:hover {
     position: relative; /* For the connecting line */
     max-width: 1200px; /* Center the grid */
     margin: 0 auto; /* Center the grid */
-    max-height: 191px;
-
 }
 
-/* Connecting Line Between Steps */
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items in one row */
+    gap: 0 30px; /* Adjust horizontal gap */
+    position: relative; /* For the connecting line */
+    max-width: 1200px; /* Center the grid */
+    margin: 0 auto; /* Center-align */
+}
+
+/* Connecting Line for All Steps (Desktop) */
 .process-steps::before {
     content: "";
     position: absolute;
-    top: 16px; /* Aligns with the center of the circular numbers */
+    top: 16px; /* Align with the center of the circular numbers */
     left: 0;
     right: 0;
     height: 1px; /* Thickness of the line */
-    background-color: #FF3B33; /* Red color for the line */
+    background-color: #FF3B33; /* Red line color */
     z-index: 0; /* Behind the circles */
 }
 
@@ -397,15 +422,21 @@ nav ul li a:hover {
     background-color: #ffffff; /* White background */
     padding: 58.5px 0px; /* Add spacing around the section */
 }
+.faq-header {
+    width: 517px; /* Set width to match container */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center-align text */
+}
 
-.faq h2 {
+
+.faq-header h2 {
     text-align: center; /* Center-align the FAQ title */
     font-size: 28px; /* Title font size */
     margin-bottom: 22px;
     font-weight: 400;
 }
 
-.faq h3 {
+.faq-header h3 {
     text-align: center; /* Center-align the FAQ title */
     font-size: 16px; /* Title font size */
     margin-bottom: 78px; /* Space below the title */
@@ -421,12 +452,11 @@ nav ul li a:hover {
     border-bottom: 1px solid #e8e8e8; /* Light gray border between items */
     padding: 24.5px 0px; /* Add spacing around each FAQ item */
     cursor: pointer; /* Pointer cursor for interactivity */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and focus effects */
+    transition: background-color 0.3s ease; /* Smooth hover and focus effects */
 }
 
 .faq-item:hover {
     background-color: #f9f9f9; /* Subtle background change on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .faq-item h3 {
@@ -526,8 +556,8 @@ nav ul li a:hover {
 
 
 .newsletter form input:focus {
-    border-color: #FF3B33; /* Change border color on focus */
-    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5); /* Add a soft shadow */
+    background-color: #ffffff; /* Ensure background remains white */
+    color: #333333; /* Ensure text remains visible */
 }
 
 .newsletter form button {
@@ -562,7 +592,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    position: relative;
 }
 
 /* Carveton Title */
@@ -580,18 +609,14 @@ footer .title {
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Distribute left and right sections */
-    align-items: center; 
-    width: 1390px;
-    margin: 0 auto; /* Center align the container */
-    display: flex;
-    justify-content: space-between; /* Space between left and right sections */
-    align-items: center; /* Align vertically */
-    position: absolute;
-    bottom: 28px; /* Position at the bottom with some spacing */
-    z-index: 2; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Allow content to adapt */
+    max-width: 1390px; /* Maintain maximum width */
+    margin: 0 auto; /* Center content */
+    padding-bottom: 28px;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
 }
-
 /* Left Section */
 .footer-content .left {
     display: flex;
@@ -641,85 +666,373 @@ footer .title {
     color: #FF3B33; /* Highlight on hover */
 }
 
-
-/* Header: Mobile View */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column; /* Stack the logo and navigation vertically */
-        align-items: center; /* Center-align all items */
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+    footer .title {
+        font-size: 229.5px; /* Scale font size proportionally */
+        line-height: 277.75px; /* Adjust line height */
     }
 
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 15px; /* Reduce spacing between links */
+    .footer-content {
+        width: calc(100% - 40px); /* Add padding for smaller viewports */
+        max-width: 1390px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Footer Base Styling */
+    footer {
+        height: auto; /* Adjust height dynamically for stacked content */
+        padding-top: 57px; /* Add padding for spacing */
     }
 
-    header .separator {
-        display: none; /* Hide the separator on smaller screens */
+    /* Carveton Title */
+    footer .title {
+        font-size: 128px; /* Reduced font size */
+        line-height: 155px; /* Adjusted line height */
+        text-align: center; /* Keep centered */
+        margin-bottom: 50px; /* Space below the title */
+    }
+
+    /* Footer Content */
+    .footer-content {
+        flex-direction: column; /* Stack the left and right sections vertically */
+        gap: 50px; /* Add space between left and right sections */
+    }
+
+    /* Left and Right Sections */
+    .footer-content .left,
+    .footer-content .right {
+        justify-content: left; /* Center-align content horizontally */
+        text-align: left; /* Center-align text */
+        width: 100%; /* Make sections full-width */
+        margin-left: 40px;
+    }
+
+    .footer-content .left nav ul {
+        justify-content: left; /* Center-align the navigation links */
     }
 }
 
-/* Intro: Mobile View */
-@media (max-width: 768px) {
-    .intro h1 {
-        font-size: 32px; /* Reduce the title font size */
+
+/* Tablet View: For screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Header */
+    header {
+        margin-top: 40px; /* Top margin */
+        margin-left: 30px; /* Align to the extreme left */
+        padding: 0;
     }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0px; /* Reduce padding for narrower screens */
+        margin: 0; /* Center align */
+    }
+}
+
+
+/* Tablet View: For screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Intro Section */
+    .intro {
+        text-align: left; /* Align content to the left */
+        margin-top: 120px; /* 120px below the header */
+        margin-left: 30px; /* Align intro section 30px from the left */
+        width: 540px; /* Constrain the width */
+        height: auto; /* Adjust height dynamically based on content */
+    }
+
+    .intro .container {
+        max-width: 540px; /* Match container width to intro section */
+        margin: 0; /* Remove default centering */
+        padding: 0; /* Remove extra padding */
+    }
+
+    /* Intro Header Container */
+    .intro-header {
+        max-width: 540px; /* Constrain the width */
+        height: 344px; /* Adjust height dynamically based on content */
+        margin: 0; /* Remove centering */
+        display: flex;
+        flex-direction: column; /* Stack the h1 elements vertically */
+        justify-content: flex-start; /* Align h1 elements at the top */
+        align-items: flex-start; /* Align h1 elements to the left */
+        padding: 0; /* Remove extra padding */
+        margin-bottom: 50px;
+         /* Hide any content exceeding the container */
+
+    }
+
+    /* Styling for Each h1 */
+    .intro-header h1 {
+        font-size: 39px; /* Adjust font size for tablet view */
+        font-weight: 400; /* Normal font weight */
+        color: #000000; /* Black color */
+        margin-bottom: 1em; /* Space between h1 elements */
+        text-align: left; /* Align text to the left */
+        letter-spacing: -0.39px; /* Maintain original letter spacing */
+        box-sizing: border-box; 
+        overflow: visible;
+    }
+
+
 
     .intro .features {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 20px; /* Reduce spacing */
+        list-style: none; /* Keep default styling */
+        margin: 31px 0 0; /* Remove auto-centering */
+        max-width: 422px; /* Maintain container width */
     }
+
+    .intro .features .row {
+        display: flex; /* Use flexbox for rows */
+        justify-content: flex-start; /* Align rows to the left */
+        gap: 32px; /* Maintain spacing between items */
+        margin-bottom: 16px; /* Space between rows */
+    }
+
+    .intro .features .row:last-child {
+        margin-bottom: 0; /* Remove margin for the last row */
+    }
+
+    .intro .features li {
+        display: flex;
+        align-items: center; /* Align icon and text vertically */
+        font-size: 14px; /* Maintain text size */
+        font-weight: 400;
+        color: #000000; /* Maintain text color */
+        gap: 10px; /* Maintain space between icon and text */
+        text-align: left; /* Align text to the left */
+    }
+
+    .intro .features li img {
+        width: 22px; /* Maintain icon size */
+        height: 22px;
+        display: inline-block;
+    }
+
+
 }
 
-/* Projects: Tablet and Mobile View */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Projects Section */
+    .projects {
+        padding: 0px 30px; /* Add 30px padding on both sides */
+        background-color: #ffffff; /* Keep white background */
+    }
+
     .projects .container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns for the bottom items */
+        grid-template-rows: auto auto; /* Two rows */
+        gap: 60px 30px; /* 60px between rows, 30px between columns */
+        max-width: 100%; /* Use full width minus padding */
+        margin: 0 auto; /* Center the grid container */
+    }
+
+    /* First Project Item: Full Width */
+    .projects .container .project:first-child {
+        grid-column: 1 / 3; /* Span across both columns */
+        grid-row: 1; /* Position in the first row */
+        width: 100%; /* Full width */
+        margin-bottom: 0; /* Remove extra spacing */
+    }
+
+    .projects .container .project:first-child img {
+        height: 370px; /* Set height for the first item's image */
+        object-fit: cover; /* Ensure the image covers the area proportionally */
+        width: 100%; /* Full width */
+    }
+
+    /* Second and Third Project Items: Side by Side */
+    .projects .container .project:nth-child(2),
+    .projects .container .project:nth-child(3) {
+        grid-column: span 1; /* Each takes one column */
+        grid-row: 2; /* Position in the second row */
+    }
+
+    .projects .container .project:nth-child(2) img,
+    .projects .container .project:nth-child(3) img {
+        height: 264px; /* Set height for the bottom two images */
+        object-fit: cover; /* Ensure the image covers the area proportionally */
+        width: 100%; /* Full width */
+    }
+
+    /* General Styling for Project Cards */
+    .project {
+        text-align: left; /* Align text to the left */
+    }
+    /* Specific Styling for the First Project's Details */
+
+}
+@media (min-width: 768px) and (max-width: 850px) {
+    .projects .project:first-child .project-details {
+        width: 333px; /* Constrain the width */
     }
 }
 
-@media (max-width: 768px) {
-    .projects .container {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
-        gap: 20px; /* Reduce spacing */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Branding Section */
+    .branding {
+        text-align: left; /* Align the title and description to the left */
+        padding: 120px 30px; /* Add 30px padding on the left and right */
+        background-color: #ffffff; /* Keep the white background */
     }
-}
 
-/* Branding: Tablet and Mobile View */
-@media (max-width: 1024px) {
+    /* Title and Description */
+    .branding h1 {
+        font-size: 28px; /* Maintain title size */
+        font-weight: 400;
+        color: #000; /* Black color */
+        margin-bottom: 22px; /* Space below title */
+    }
+
+    .branding p {
+        font-size: 16px; /* Maintain description size */
+        color: #000000; /* Black color */
+        margin-bottom: 60px; /* Space below description to branding items */
+        font-weight: 400;
+    }
+
+    /* Grid Layout for Branding Items */
     .branding-items {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 68px 30px; /* 68px vertical gap, 30px horizontal gap */
+        max-width: 100%; /* Allow full width */
+        margin: 0; /* No horizontal centering */
+    }
+
+    .branding-item {
+        text-align: left; /* Align content to the left */
+        position: relative;
+        min-width: 330px; /* Ensure minimum width for each item */
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .branding-header {
+        width: 374px; /* Constrain the width */
     }
 }
 
-@media (max-width: 768px) {
-    .branding-items {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
-        gap: 20px; /* Reduce spacing */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Process Section */
+    .process {
+        text-align: left; /* Align the header and description to the left */
+        padding: 0 30px 80px 0; /* Add 30px padding on the left and right */
+        background-color: #ffffff; /* Keep the white background */
     }
+
+    /* Header and Description */
+    .process-header {
+        width: 517px; /* Set width for consistent line breaks */
+        margin-left: 30px; /* Skew to the left */
+        margin-bottom: 80px; /* Space below the header */
+        text-align: left; /* Ensure text is left-aligned */
+    }
+
+
+    /* Grid Layout for Process Items */
+    .process-steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 10px 30px; /* 80px vertical gap, 30px horizontal gap */
+        max-width: 100%; /* Allow full width */
+        margin: 0; /* No horizontal centering */
+    }
+
+    .process-step {
+        margin-left: 30px;
+        text-align: left; /* Align content to the left */
+        position: relative;
+        min-width: 330px; /* Ensure minimum width for each item */
+    }
+    .process-step p {
+        margin-bottom: 20px;
+    }
+      /* Connecting Line for the First Row */
+      .process-steps::before {
+        content: "";
+        position: absolute;
+        top: 16px; /* Align with the center of the circular numbers */
+        left: 0;
+        width: 100%; /* Line spans the first row only */
+        height: 1px; /* Thickness of the line */
+        background-color: #FF3B33; /* Red line color */
+        z-index: 0; /* Behind the circles */
+    }
+
+    /* Connecting Line for the Second Row */
+    .process-steps::after {
+        content: "";
+        position: absolute;
+        top: calc(50% + 14px); /* Align with the second row */
+        left: 0;
+        width: 100%; /* Line spans the second row only */
+        height: 1px; /* Thickness of the line */
+        background-color: #FF3B33; /* Red line color */
+        z-index: 0; /* Behind the circles */
+    }
+
 }
 
-
-
-/* Footer Title: Mobile View (Overlay Style) */
-@media (max-width: 768px) {
-    footer .title {
-        font-size: 60px; /* Smaller font size for mobile */
-        color: rgba(255, 59, 51, 0.1); /* Semi-transparent red */
-        position: absolute; /* Overlay positioning */
-        top: 50%; /* Center vertically */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Adjust positioning to center */
-        z-index: 0; /* Place it behind footer content */
-        text-align: center;
+/* Adjust Header Width for Narrower Screens (768px - 850px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* FAQ Section */
+    .faq {
+        background-color: #ffffff; /* White background */
+        padding: 120px 30px; /* Add 30px padding on left and right for tablet view */
     }
 
-    footer .container {
-        position: relative; /* Ensure content is above the overlay */
-        z-index: 1; /* Layer above the title */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items */
-        text-align: center; /* Center-align text */
-        gap: 20px; /* Add spacing between sections */
+    /* FAQ Header */
+    .faq-header {
+        width: 517px; /* Fixed width for consistent line breaks */
+        margin-left: 0; /* Skewed left on tablet */
+        margin-right: 0; /* No horizontal centering */
+        text-align: left; /* Left-align text */
+    }
+    
+
+    .faq-header h2 {
+        text-align: left;
+    }
+
+    .faq-header h3 {
+        text-align: left;
+    }
+
+    /* FAQ Container */
+    .faq .container {
+        max-width: 100%; /* Full width on tablet */
+        margin: 0; /* Remove horizontal centering */
+    }
+
+}
+
+/* Narrower Screens: Adjust Header Width */
+@media (min-width: 768px) and (max-width: 850px) {
+    .faq-header {
+        width: 374px; /* Reduce header width for narrower tablets */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .newsletter {
+        text-align: left; /* Align all content to the left */
+        padding: 120px 30px; /* Add 30px padding on both sides */
+    }
+
+    .newsletter .container {
+        max-width: 100%; /* Allow full width */
+        margin-right: 0; /* Remove horizontal centering */
+    }
+    .newsletter form {
+        align-items: flex-start; /* Align form elements to the left */
+        margin: 0;
     }
 }
