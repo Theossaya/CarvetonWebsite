@@ -684,6 +684,7 @@ footer .title {
     footer {
         height: auto; /* Adjust height dynamically for stacked content */
         padding-top: 57px; /* Add padding for spacing */
+        overflow: visible;
     }
 
     /* Carveton Title */
@@ -723,6 +724,7 @@ footer .title {
         margin-top: 40px; /* Top margin */
         margin-left: 30px; /* Align to the extreme left */
         padding: 0;
+        overflow: visible;
     }
 
 }
@@ -870,12 +872,15 @@ footer .title {
 }
 
 
+
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Branding Section */
     .branding {
         text-align: left; /* Align the title and description to the left */
         padding: 120px 30px; /* Add 30px padding on the left and right */
         background-color: #ffffff; /* Keep the white background */
+        overflow: visible;
+
     }
 
     /* Title and Description */
@@ -900,6 +905,7 @@ footer .title {
         gap: 68px 30px; /* 68px vertical gap, 30px horizontal gap */
         max-width: 100%; /* Allow full width */
         margin: 0; /* No horizontal centering */
+        
     }
 
     .branding-item {
@@ -924,6 +930,8 @@ footer .title {
         text-align: left; /* Align the header and description to the left */
         padding: 0 30px 80px 0; /* Add 30px padding on the left and right */
         background-color: #ffffff; /* Keep the white background */
+        overflow: visible;
+
     }
 
     /* Header and Description */
@@ -985,6 +993,8 @@ footer .title {
     .faq {
         background-color: #ffffff; /* White background */
         padding: 120px 30px; /* Add 30px padding on left and right for tablet view */
+        overflow: visible;
+
     }
 
     /* FAQ Header */
@@ -1022,6 +1032,8 @@ footer .title {
     .newsletter {
         text-align: left; /* Align all content to the left */
         padding: 120px 30px; /* Add 30px padding on both sides */
+        overflow: visible;
+
     }
 
     .newsletter .container {
