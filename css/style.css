@@ -196,7 +196,6 @@ nav ul li a:hover {
 
 .project img {
     width: 100%;
-    max-width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image scales proportionally */
     margin-bottom: 15px; /* Space below the image */
@@ -307,14 +306,14 @@ nav ul li a:hover {
 
 .branding .btn {
     margin-top: 11px;
-    box-shadow: 0px 8px 18px 0px rgba(255, 59, 51, 0.3); /* Apply Figma box-shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
-button:hover {
-    background-color: #e05b52; /* Darker red on hover */
+.branding .btn:hover {
+    background-color: #FF3B33; /* Darker red on hover */
     transform: translateY(-2px); /* Slight lift effect */
     box-shadow: 0px 10px 20px 0px rgba(255, 59, 51, 0.4); /* Enhance shadow on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+
 }
 /* Reusable Button Style */
 
@@ -557,7 +556,6 @@ button:hover {
 
 
 .newsletter form input:focus {
-    background-color: #ffffff; /* Ensure background remains white */
     color: #333333; /* Ensure text remains visible */
 }
 
@@ -679,7 +677,7 @@ footer .title {
         max-width: 1390px;
     }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
     /* Footer Base Styling */
     footer {
         height: auto; /* Adjust height dynamically for stacked content */
@@ -716,8 +714,8 @@ footer .title {
 }
 
 
-/* Tablet View: For screens between 768px and 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Tablet View: For screens between 768px and 1439px */
+@media (min-width: 768px) and (max-width: 1439px) {
 
     /* Header */
     header {
@@ -729,7 +727,7 @@ footer .title {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
     .container {
         padding: 0px; /* Reduce padding for narrower screens */
         margin: 0; /* Center align */
@@ -737,8 +735,8 @@ footer .title {
 }
 
 
-/* Tablet View: For screens between 768px and 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Tablet View: For screens between 768px and 1439px */
+@media (min-width: 768px) and (max-width: 1439px) {
     /* Intro Section */
     .intro {
         text-align: left; /* Align content to the left */
@@ -819,61 +817,63 @@ footer .title {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* Projects Section */
+@media (min-width: 744px) and (max-width: 1439px) {
     .projects {
-        padding: 0px 30px; /* Add 30px padding on both sides */
-        background-color: #ffffff; /* Keep white background */
+        padding: 0 20px; /* Maintain 20px padding on both sides */
     }
 
     .projects .container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns for the bottom items */
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
         grid-template-rows: auto auto; /* Two rows */
-        gap: 60px 30px; /* 60px between rows, 30px between columns */
-        max-width: 100%; /* Use full width minus padding */
-        margin: 0 auto; /* Center the grid container */
+        gap: 30px; /* Constant gap between rows and columns */
+        max-width: 100%; /* Full container width */
+        margin: 0 auto;
     }
 
-    /* First Project Item: Full Width */
-    .projects .container .project:first-child {
+    /* First Project (Spans Two Columns) */
+    .project.first {
         grid-column: 1 / 3; /* Span across both columns */
-        grid-row: 1; /* Position in the first row */
-        width: 100%; /* Full width */
-        margin-bottom: 0; /* Remove extra spacing */
+        width: 100%; /* Full container width */
+        height: auto; /* Dynamic height */
     }
 
-    .projects .container .project:first-child img {
-        max-height: 370px; /* Set height for the first item's image */
-        object-fit: cover; /* Ensure the image covers the area proportionally */
-        max-width: 100%; /* Full width */
+    .project.first img {
+        width: 100%; /* Full width within grid */
+        max-width: 1326.82px; /* Max width at larger tablet screens */
+        height: auto;
+        max-height: 715.63px; /* Max height at larger tablet screens */
+        object-fit: cover; /* Maintain aspect ratio */
     }
 
-    /* Second and Third Project Items: Side by Side */
-    .projects .container .project:nth-child(2),
-    .projects .container .project:nth-child(3) {
+    /* Second and Third Projects */
+    .project:nth-child(2),
+    .project:nth-child(3) {
         grid-column: span 1; /* Each takes one column */
-        grid-row: 2; /* Position in the second row */
+        width: 100%; /* Full container width */
+        height: auto;
     }
 
-    .projects .container .project:nth-child(2) img,
-    .projects .container .project:nth-child(3) img {
-        height: 264px; /* Set height for the bottom two images */
-        object-fit: cover; /* Ensure the image covers the area proportionally */
-        max-width: 100%; /* Full width */
+    .project:nth-child(2) img,
+    .project:nth-child(3) img {
+        width: 100%; /* Full width within grid */
+        max-width: 644.07px; /* Max width at larger tablet screens */
+        height: auto;
+        max-height: 510.61px; /* Max height at larger tablet screens */
+        object-fit: cover; /* Maintain aspect ratio */
     }
 
-    /* General Styling for Project Cards */
-    .project {
-        text-align: left; /* Align text to the left */
+    /* Fix for Project Details to Stay in Grid */
+    .project .project-details {
+        padding: 0; /* Ensure details align perfectly within the grid */
+        margin: 0 auto; /* Center align details */
     }
-    /* Specific Styling for the First Project's Details */
-
 }
 
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (min-width: 768px) and (max-width: 1439px) {
     /* Branding Section */
     .branding {
         text-align: left; /* Align the title and description to the left */
@@ -904,14 +904,14 @@ footer .title {
         grid-template-columns: repeat(2, 1fr); /* Two items per row */
         gap: 68px 30px; /* 68px vertical gap, 30px horizontal gap */
         max-width: 100%; /* Allow full width */
-        margin: 0; /* No horizontal centering */
-        
+        margin: 0; /* No horizontal centering */         
     }
 
     .branding-item {
         text-align: left; /* Align content to the left */
         position: relative;
         min-width: 330px; /* Ensure minimum width for each item */
+        overflow: visible;
     }
 
 
@@ -924,14 +924,26 @@ footer .title {
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
     /* Process Section */
     .process {
         text-align: left; /* Align the header and description to the left */
         padding: 0 30px 80px 0; /* Add 30px padding on the left and right */
         background-color: #ffffff; /* Keep the white background */
-        overflow: visible;
-
+    }
+    .process h1 {
+        font-size: 28px; /* Title font size */
+        font-weight: 400;
+        color: #000; /* Black color for title */
+        margin-bottom: 22px; /* Space below title */
+    }
+    
+    .process-header p {
+        font-size: 16px; /* Description font size */
+        color: #000000; /* Gray color for text */
+        margin-bottom: 78px; /* Space below description */
+        font-weight: 400;
+        line-height: 24px;
     }
 
     /* Header and Description */
@@ -957,6 +969,7 @@ footer .title {
         text-align: left; /* Align content to the left */
         position: relative;
         min-width: 330px; /* Ensure minimum width for each item */
+        overflow: visible;
     }
     .process-step p {
         margin-bottom: 20px;
@@ -988,7 +1001,7 @@ footer .title {
 }
 
 /* Adjust Header Width for Narrower Screens (768px - 850px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
     /* FAQ Section */
     .faq {
         background-color: #ffffff; /* White background */
@@ -1028,7 +1041,7 @@ footer .title {
         width: 374px; /* Reduce header width for narrower tablets */
     }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
     .newsletter {
         text-align: left; /* Align all content to the left */
         padding: 120px 30px; /* Add 30px padding on both sides */
