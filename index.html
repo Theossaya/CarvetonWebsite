@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">CARVETON</div>
-            <div class="separator"></div>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">CARVETON</div>
+            <div class="header__separator"></div>
             <div class="hamburger"></div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#guides">Guides</a></li>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#case-studies" class="header__nav-link">Case Studies</a></li>
+                    <li class="header__nav-item"><a href="#services" class="header__nav-link">Services</a></li>
+                    <li class="header__nav-item"><a href="#guides" class="header__nav-link">Guides</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,341 +31,334 @@
 
     <!-- Intro Section -->
     <section class="intro">
-        <div class="container">
-            <div class="intro-header">
-                <h1>Carveton is a brand consulting firm.</h1>
-                <h1>We boost customer insistence and conversions.</h1>
-                <h1>Based on real customer insights.</h1>
+        <div class="intro__container container">
+            <div class="intro__header">
+                <h1 class="intro__header-title">Carveton is a brand consulting firm.</h1>
+                <h1 class="intro__header-title">We boost customer insistence and conversions.</h1>
+                <h1 class="intro__header-title">Based on real customer insights.</h1>
             </div>
-            <ul class="features">
-                <div class="row">
-                    <li>
-                        <img src="images/checkmark.svg" alt="Checkmark"> Brand clarity
+            <ul class="intro__features">
+                <div class="intro__features-row">
+                    <li class="intro__feature">
+                        <img src="images/checkmark.svg" alt="Checkmark" class="intro__feature-icon"> Brand clarity
                     </li>
-                    <li>
-                        <img src="images/checkmark.svg" alt="Checkmark"> Aligned brand personality
+                    <li class="intro__feature">
+                        <img src="images/checkmark.svg" alt="Checkmark" class="intro__feature-icon"> Aligned brand personality
                     </li>
                 </div>
-                <div class="row">
-                    <li>
-                        <img src="images/checkmark.svg" alt="Checkmark"> Unique value propositions
+                <div class="intro__features-row">
+                    <li class="intro__feature">
+                        <img src="images/checkmark.svg" alt="Checkmark" class="intro__feature-icon"> Unique value propositions
                     </li>
-                    <li>
-                        <img src="images/checkmark.svg" alt="Checkmark"> Mouth-watering offer
+                    <li class="intro__feature">
+                        <img src="images/checkmark.svg" alt="Checkmark" class="intro__feature-icon"> Mouth-watering offer
                     </li>
                 </div>
             </ul>
-            <a href="#contact" class="btn">Book Intro Call</a>
+            <a href="#contact" class="intro__btn">Book Intro Call</a>
         </div>
     </section>
-    
 
     <!-- Projects Section -->
     <section class="projects">
-        <div class="container">
-            <!-- First Project -->
-            <div class="project first">
-                <img src="images/missfit-coaching.png" alt="Missfit Coaching">
-                <div class="project-details">
-                    <h3>Missfit Coaching</h3>
-                    <p>The Ultimate Career Gym for Professionals</p>
-                    <p>Strategy, Logo, Identity Program, Offer Development</p>
+        <div class="projects__container container">
+            <div class="projects__item projects__item--first">
+                <img src="images/missfit-coaching.png" alt="Missfit Coaching" class="projects__item-image">
+                <div class="projects__item-details">
+                    <h3 class="projects__item-title">Missfit Coaching</h3>
+                    <p class="projects__item-subtitle">The Ultimate Career Gym for Professionals</p>
+                    <p class="projects__item-description">Strategy, Logo, Identity Program, Offer Development</p>
                 </div>
             </div>
-    
-            <!-- Second Project -->
-            <div class="project">
-                <img src="images/onspry.png" alt="Onspry">
-                <div class="project-details">
-                    <h3>Onspry</h3>
-                    <p>Create Your Story</p>
-                    <p>Strategy, Logo, Identity Program</p>
+            <div class="projects__item">
+                <img src="images/onspry.png" alt="Onspry" class="projects__item-image">
+                <div class="projects__item-details">
+                    <h3 class="projects__item-title">Onspry</h3>
+                    <p class="projects__item-subtitle">Create Your Story</p>
+                    <p class="projects__item-description">Strategy, Logo, Identity Program</p>
                 </div>
             </div>
-    
-            <!-- Third Project -->
-            <div class="project">
-                <img src="images/prafort.png" alt="Prafort">
-                <div class="project-details">
-                    <h3>Prafort</h3>
-                    <p>Unlock Potential</p>
-                    <p>Strategy, Logo, Identity Program, Offer Development</p>
+            <div class="projects__item">
+                <img src="images/prafort.png" alt="Prafort" class="projects__item-image">
+                <div class="projects__item-details">
+                    <h3 class="projects__item-title">Prafort</h3>
+                    <p class="projects__item-subtitle">Unlock Potential</p>
+                    <p class="projects__item-description">Strategy, Logo, Identity Program, Offer Development</p>
                 </div>
             </div>
         </div>
     </section>
-    
 
-
-    
     <!-- Branding Section -->
     <section class="branding">
-        <div class="container">
-            <div class="branding-header">
-                <h1>Branding For You</h1>
-                <p>We make your business positioned to capture and retain market share.</p>
+        <div class="branding__container container">
+            <div class="branding__header">
+                <h1 class="branding__title">Branding For You</h1>
+                <p class="branding__description">We make your business positioned to capture and retain market share.</p>
             </div>
-            <div class="branding-items">
-                <div class="branding-item">
-                    <h2>01</h2>
-                    <h3>Market Research</h3>
-                    <p>Uncover actionable customer insights that influence your brand, offer, and business.</p>
+            <div class="branding__items">
+                <div class="branding__item">
+                    <h2 class="branding__item-number">01</h2>
+                    <h3 class="branding__item-title">Market Research</h3>
+                    <p class="branding__item-description">Uncover actionable customer insights that influence your brand, offer, and business.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>02</h2>
-                    <h3>Brand Strategy</h3>
-                    <p>Position your brand as the obvious choice in your market.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">02</h2>
+                    <h3 class="branding__item-title">Brand Strategy</h3>
+                    <p class="branding__item-description">Position your brand as the obvious choice in your market.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>03</h2>
-                    <h3>Naming, Slogans & Taglines</h3>
-                    <p>Reflect and reinforce your brand strategy with a clear, purposeful, and memorable name.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">03</h2>
+                    <h3 class="branding__item-title">Naming, Slogans & Taglines</h3>
+                    <p class="branding__item-description">Reflect and reinforce your brand strategy with a clear, purposeful, and memorable name.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>04</h2>
-                    <h3>Brand Voice & Messaging Guidelines</h3>
-                    <p>Create a differentiated messaging framework to amplify your brand’s core message and market positioning.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">04</h2>
+                    <h3 class="branding__item-title">Brand Voice & Messaging Guidelines</h3>
+                    <p class="branding__item-description">Create a differentiated messaging framework to amplify your brand’s core message and market positioning.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>05</h2>
-                    <h3>Logo & Brand Icon</h3>
-                    <p>Turn your complex idea into a clear and effective logo.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">05</h2>
+                    <h3 class="branding__item-title">Logo & Brand Icon</h3>
+                    <p class="branding__item-description">Turn your complex idea into a clear and effective logo.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>06</h2>
-                    <h3>Visual Identity Program</h3>
-                    <p>Cohesive, professional branding to make your brand look the talk.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">06</h2>
+                    <h3 class="branding__item-title">Visual Identity Program</h3>
+                    <p class="branding__item-description">Cohesive, professional branding to make your brand look the talk.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>07</h2>
-                    <h3>Offer Design</h3>
-                    <p>Create mouth-watering offers leveraging real customer insights.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">07</h2>
+                    <h3 class="branding__item-title">Offer Design</h3>
+                    <p class="branding__item-description">Create mouth-watering offers leveraging real customer insights.</p>
                 </div>
-                <div class="branding-item">
-                    <h2>08</h2>
-                    <h3>Top-tier Reporting</h3>
-                    <p>Via the McKinsey MECE framework for clear, concise, and structured presentations.</p>
+                <div class="branding__item">
+                    <h2 class="branding__item-number">08</h2>
+                    <h3 class="branding__item-title">Top-tier Reporting</h3>
+                    <p class="branding__item-description">Via the McKinsey MECE framework for clear, concise, and structured presentations.</p>
                 </div>
             </div>
-            <a href="#contact" class="btn">Book Intro Call</a>
+            <a href="#contact" class="branding__btn">Book Intro Call</a>
         </div>
     </section>
 
     <!-- Process Section -->
     <section class="process">
-        <div class="container">
-            <div class="process-header">
-                <h1>Our Process</h1>
-                <p>
-                    From vision to execution, we work with you to define a standout<br>
+        <div class="process__container container">
+            <div class="process__header">
+                <h1 class="process__title">Process</h1>
+                <p class="process__description">
+                    From vision to execution, we work with you to define a standout
                     brand persona and irresistible offer that gets results.
                 </p>
             </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <h2>01</h2>
-                    <h3>Book Intro Call</h3>
-                    <p>Share your brand and business goals, so we get straight to what matters most.</p>
+            <div class="process__steps">
+                <div class="process__step">
+                    <h2 class="process__step-number">01</h2>
+                    <h3 class="process__step-title">Book Intro Call</h3>
+                    <p class="process__step-description">Share your brand and business goals, so we get straight to what matters most.</p>
                 </div>
-                <div class="process-step">
-                    <h2>02</h2>
-                    <h3>Brand Review</h3>
-                    <p>Uncover what’s working—and what’s not.</p>
+                <div class="process__step">
+                    <h2 class="process__step-number">02</h2>
+                    <h3 class="process__step-title">Brand Review</h3>
+                    <p class="process__step-description">Uncover what’s working—and what’s not.</p>
                 </div>
-                <div class="process-step">
-                    <h2>03</h2>
-                    <h3>Watch us Work—or Work With Us</h3>
-                    <p>We execute on your desired deliverables to achieve your stated objectives. Your inputs are welcome in our creative process.</p>
+                <div class="process__step">
+                    <h2 class="process__step-number">03</h2>
+                    <h3 class="process__step-title">Watch us Work—or Work With Us</h3>
+                    <p class="process__step-description">We execute on your desired deliverables to achieve your stated objectives. Your inputs are welcome in our creative process.</p>
                 </div>
-                <div class="process-step">
-                    <h2>04</h2>
-                    <h3>Get Your Deliverables</h3>
-                    <p>Get brand artifacts, deliverables, and source files needed to build and nurture your brand.</p>
+                <div class="process__step">
+                    <h2 class="process__step-number">04</h2>
+                    <h3 class="process__step-title">Get Your Deliverables</h3>
+                    <p class="process__step-description">Get brand artifacts, deliverables, and source files needed to build and nurture your brand.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
     <section class="faq">
-        <div class="container">
-        <div class="faq-header">
-            <h2>F.A.Q's</h2>
-            <h3>Frequently Asked Questions</h3>
-        </div>
-            <div class="faq-item">
-                <h3>
-                    What is a brand strategy consultancy, and how is it different from marketing or advertising?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    A brand strategy consultancy focuses on defining the core elements that shape your brand’s identity—such as your brand persona, unique value propositions, and positioning within the market. This lays the groundwork for all future marketing and advertising efforts. In short, we help you build the foundation that marketing builds upon.
-                </p>
+        <div class="faq__container container">
+            <div class="faq__header">
+                <h2 class="faq__title">F.A.Q's</h2>
+                <h3 class="faq__subtitle">Frequently Asked Questions</h3>
             </div>
-            <div class="faq-item">
-                <h3>
-                    How does your brand strategy service improve customer insistence and conversions?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    We use a combination of in-depth market research, competitor analysis, and real customer insights to identify what truly resonates with your audience. With those insights we design brand persona’s and offer’s designed to meet both the emotional and functional needs of your target audience, ensuring they choose your brand time and again.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    How long does it take to create a brand strategy?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Typically, our process takes about 21 days from reviewing your existing brand or vision to delivery. This timeline ensures we have ample time to conduct market research, develop your brand persona, and craft an offer that stands out. However, the timeline may be adjusted depending on the complexity of your needs and how quickly you can provide input at various stages.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What industries do you specialize in?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    While we work across a broad range of industries, our expertise lies in sectors where brand differentiation and customer loyalty are critical. We have successfully partnered with clients in technology, consumer goods, healthcare, and professional services, among others. Our approach is tailored to the unique challenges of each industry, ensuring that the strategies we create are highly relevant.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What exactly do you include in your market research?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Our market research is comprehensive and action-oriented. We don’t just gather data—we dig deep into customer behaviors, preferences, pain points, and decision-making processes. This allows us to identify the gaps in the market and uncover insights that shape both your brand strategy and offer. We also analyze competitor strategies to ensure that your brand stands out where it matters most.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    How is your brand strategy service different from others?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Our approach is entirely customized. Rather than offering cookie-cutter solutions, we tailor every aspect of the strategy based on real customer insights, industry trends, and competitive analysis. We combine this data-driven approach with creativity to deliver a strategy that’s not only unique but also highly actionable.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What do you mean by a "mouth-watering offer"?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    A mouth-watering offer is one that your target audience finds irresistible. It's a combination of pricing, product/service features, and unique benefits that speak directly to your customers’ needs and desires. We love to make it difficult for prospects to say "no."
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What is the McKinsey MECE framework, and how does it improve reporting?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    The MECE (Mutually Exclusive, Collectively Exhaustive) framework is a method we use to present our findings and recommendations in a clear, organized manner. It ensures that every part of our strategy is both distinct and comprehensive, leaving no gaps. It also makes it easier for you to understand the data and act on our recommendations.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    How do I know if your strategies will work for my business?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Our strategies are based on rigorous research and tailored to your unique business context. While each client is different, we always start with data: understanding your audience, analyzing competitors, and identifying gaps in the market. This ensures that the strategy is designed to meet the specific needs of your business, and not just based on general principles.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    How involved do I need to be in the strategy creation process?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Your input is crucial, especially in the discovery phase where we seek to understand your business, brand, and goals. After that, our team takes over the heavy lifting, presenting you with detailed research and strategy drafts at key milestones. You can be as hands-on or hands-off as you’d like, but we always keep communication open to ensure the strategy aligns with your vision.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What happens after I receive my brand strategy?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Once we deliver your brand strategy, we don’t just leave you with a document. We walk you through the entire strategy, explaining each element and how it applies to your business.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    What’s the next step after I fill out the contact form?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    After filling out the contact form, we’ll schedule an initial consultation call to discuss your business, your goals, and how we can help. During this call, we’ll walk you through our process, answer any questions you have, and outline the next steps for getting started.
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    How much do your services cost?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    Our pricing starts from $1000 and varies based on your desired deliverables and the depth of engagement. 
-                    You can choose the exact combination of services you need whether it's market research—where we uncover customer segments, competitor analysis, and industry trends; brand strategy—where we define your brand's core identity, align it with your target audience, and craft a unique value proposition; or offer development—where we design offers based on real customer insights to maximize conversions. 
-                </p>
-            </div>
-            <div class="faq-item">
-                <h3>
-                    Is your brand strategy service a one-time project or ongoing support?
-                    <img src="assets/icons/down.svg" alt="Toggle Icon">
-                </h3>
-                <p>
-                    While the core brand strategy is delivered as a one-time project, we offer options for ongoing support and consultation. If you need help implementing the strategy or refining it over time, we’re available to continue working with you as your brand grows and evolves.
-                </p>
+            <div class="faq__items">
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What is a brand strategy consultancy, and how is it different from marketing or advertising?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        A brand strategy consultancy focuses on defining the core elements that shape your brand’s identity—such as your brand persona, unique value propositions, and positioning within the market. This lays the groundwork for all future marketing and advertising efforts. In short, we help you build the foundation that marketing builds upon.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How does your brand strategy service improve customer insistence and conversions?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        We use a combination of in-depth market research, competitor analysis, and real customer insights to identify what truly resonates with your audience. With those insights we design brand persona’s and offer’s designed to meet both the emotional and functional needs of your target audience, ensuring they choose your brand time and again.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How long does it take to create a brand strategy?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Typically, our process takes about 21 days from reviewing your existing brand or vision to delivery. This timeline ensures we have ample time to conduct market research, develop your brand persona, and craft an offer that stands out. However, the timeline may be adjusted depending on the complexity of your needs and how quickly you can provide input at various stages.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What industries do you specialize in?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        While we work across a broad range of industries, our expertise lies in sectors where brand differentiation and customer loyalty are critical. We have successfully partnered with clients in technology, consumer goods, healthcare, and professional services, among others. Our approach is tailored to the unique challenges of each industry, ensuring that the strategies we create are highly relevant.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What exactly do you include in your market research?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Our market research is comprehensive and action-oriented. We don’t just gather data—we dig deep into customer behaviors, preferences, pain points, and decision-making processes. This allows us to identify the gaps in the market and uncover insights that shape both your brand strategy and offer. We also analyze competitor strategies to ensure that your brand stands out where it matters most.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How is your brand strategy service different from others?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Our approach is entirely customized. Rather than offering cookie-cutter solutions, we tailor every aspect of the strategy based on real customer insights, industry trends, and competitive analysis. We combine this data-driven approach with creativity to deliver a strategy that’s not only unique but also highly actionable.
+                    </p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What do you mean by a "mouth-watering offer"?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        A mouth-watering offer is one that your target audience finds irresistible. It's a combination of pricing, product/service features, and unique benefits that speak directly to your customers’ needs and desires. We love to make it difficult for prospects to say "no."
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What is the McKinsey MECE framework, and how does it improve reporting?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        The MECE (Mutually Exclusive, Collectively Exhaustive) framework is a method we use to present our findings and recommendations in a clear, organized manner. It ensures that every part of our strategy is both distinct and comprehensive, leaving no gaps. It also makes it easier for you to understand the data and act on our recommendations.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How do I know if your strategies will work for my business?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Our strategies are based on rigorous research and tailored to your unique business context. While each client is different, we always start with data: understanding your audience, analyzing competitors, and identifying gaps in the market. This ensures that the strategy is designed to meet the specific needs of your business, and not just based on general principles.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How involved do I need to be in the strategy creation process?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Your input is crucial, especially in the discovery phase where we seek to understand your business, brand, and goals. After that, our team takes over the heavy lifting, presenting you with detailed research and strategy drafts at key milestones. You can be as hands-on or hands-off as you’d like, but we always keep communication open to ensure the strategy aligns with your vision.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What happens after I receive my brand strategy?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Once we deliver your brand strategy, we don’t just leave you with a document. We walk you through the entire strategy, explaining each element and how it applies to your business.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        What’s the next step after I fill out the contact form?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        After filling out the contact form, we’ll schedule an initial consultation call to discuss your business, your goals, and how we can help. During this call, we’ll walk you through our process, answer any questions you have, and outline the next steps for getting started.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        How much do your services cost?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        Our pricing starts from $1000 and varies based on your desired deliverables and the depth of engagement. 
+                        You can choose the exact combination of services you need whether it's market research—where we uncover customer segments, competitor analysis, and industry trends; brand strategy—where we define your brand's core identity, align it with your target audience, and craft a unique value proposition; or offer development—where we design offers based on real customer insights to maximize conversions.                     </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__item-question">
+                        Is your brand strategy service a one-time project or ongoing support?
+                        <img src="assets/icons/down.svg" alt="Toggle Icon" class="faq__item-icon">
+                    </h3>
+                    <p class="faq__item-answer">
+                        While the core brand strategy is delivered as a one-time project, we offer options for ongoing support and consultation. If you need help implementing the strategy or refining it over time, we’re available to continue working with you as your brand grows and evolves.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Newsletter Section -->
     <section class="newsletter">
-        <div class="container">
-            <h2>Newsletter</h2>
-            <p>Get cutting-edge branding tactics.</p>
-            <form action="#">
-                <input type="email" placeholder="Your email here" required>
-                <button type="submit">Join Now</button>
+        <div class="newsletter__container container">
+            <h2 class="newsletter__title">Newsletter</h2>
+            <p class="newsletter__description">Get cutting-edge branding tactics.</p>
+            <form action="#" class="newsletter__form">
+                <input type="email" class="newsletter__input" placeholder="Your email here" required>
+                <button type="submit" class="newsletter__btn">Join Now</button>
             </form>
         </div>
     </section>
-<!-- Footer Section -->
-<!-- Footer Section -->
-<footer>
-    <!-- "CARVETON" Title -->
-    <div class="title">CARVETON</div>
 
-    <!-- Footer Bottom Content -->
-        <div class="footer-content">
-            <!-- Left Section -->
-            <div class="left">
-                <p>&copy; 2025 Carveton Ltd. All Rights Reserved.</p>
-                <nav>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </nav>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <h1 class="footer__title">CARVETON</h1>
+            <div class="footer__content">
+                <div class="footer__left">
+                    <p class="footer__text">&copy; 2025 Carveton Ltd. All Rights Reserved.</p>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Terms of Service</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__right">
+                    <a href="#" class="footer__social-link">Facebook</a>
+                    <a href="#" class="footer__social-link">X (Twitter)</a>
+                    <a href="#" class="footer__social-link">LinkedIn</a>
+                    <a href="#" class="footer__social-link">Behance</a>
+                    <a href="#" class="footer__social-link">Dribbble</a>
+                </div>
             </div>
-            <!-- Right Section -->
-            <div class="right">
-                <a href="#">Facebook</a>
-                <a href="#">X (Twitter)</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Behance</a>
-                <a href="#">Dribbble</a>
-            </div>
-        </div>
-</footer>
-
-
+        </footer>
 
     <script src="js/faq.js"></script>
     <script src="js/menu.js"></script>
-
 </body>
+
 </html>
