@@ -904,7 +904,7 @@ box-sizing: border-box; /* Include padding/margins in dimensions */
     transform: translateY(0); /* Slide into position */
 }
 .header + .intro {
-    margin-top: 10.6875rem; /* 171px converted to rem */
+    margin-top: var(--mospace-9xl); /* 171px converted to rem */
 }
 }
 
@@ -1477,7 +1477,7 @@ box-sizing: border-box; /* Include padding/margins in dimensions */
 
 .header__nav-link {
     text-decoration: none;
-    font-size: clamp(0.875rem, 1.871vw + 0.005rem, 1.688rem);
+    font-size: clamp(0.875rem, 1.871vw + 0.005rem, 1.687rem);
     line-height: clamp(14.823rem, 93.184vw + -28.508rem, 55.299rem);
     font-weight: 500;
     color: #000000;
